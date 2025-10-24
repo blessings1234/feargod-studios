@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | FearGod Studios</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">FearGod Studios</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="music.html">Music</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <button id="mode-toggle">🌓</button>
+  </div>
+</nav>
+
+<section>
+  <h1>Admin Login</h1>
+  <form id="loginForm">
+    <input type="password" id="adminPass" placeholder="Enter Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <div id="adminContent">
+    <h2>Admin Panel</h2>
+    <p>Use JS functions to add music or gallery images:</p>
+    <pre>
+addMusic("Song Title", "assets/music/song.mp3");
+addGallery("assets/images/gallery1.jpg");
+    </pre>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 FearGod Studios. All rights reserved.</p>
+</footer>
+
+<button id="backToTop">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* Reset & base */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+body { background:#fff; color:#111; transition:0.3s; }
+a { text-decoration:none; color:inherit; }
+h1,h2,h3,h4,h5,h6 { margin-bottom:10px; }
+
+/* Navbar */
+nav {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:15px 50px; background:#111; color:#fff;
+  position: sticky; top:0; z-index: 100;
+}
+nav a { margin:0 15px; color:#fff; font-weight:500; }
+nav a:hover { color:#ffbb00; }
+nav .logo { font-weight:bold; font-size:1.5rem; }
+
+/* Hero */
+.hero {
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  height:80vh; 
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero.jpg') center/cover no-repeat;
+  color:#fff; text-align:center;
+}
+.hero h1 { font-size:3rem; margin-bottom:20px; }
+.hero p { font-size:1.2rem; margin-bottom:30px; }
+.hero .cta { padding:10px 25px; background:#ffbb00; color:#000; border-radius:25px; font-weight:bold; transition:0.3s; }
+.hero .cta:hover { background:#fff; color:#000; }
+
+/* Sections */
+section { padding:60px 20px; max-width:1200px; margin:0 auto; }
+
+/* Gallery */
+.gallery-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px;
+}
+.gallery-grid img { width:100%; border-radius:10px; transition:0.3s; }
+.gallery-grid img:hover { transform:scale(1.05); }
+
+/* Music */
+.audio-player { margin:20px 0; }
+
+/* Footer */
+footer { background:#111; color:#fff; padding:20px; text-align:center; }
+footer a { color:#ffbb00; margin:0 10px; }
+footer a:hover { color:#fff; }
+
+/* Back-to-top button */
+#backToTop {
+  position:fixed; bottom:30px; right:30px;
+  padding:10px 15px; background:#ffbb00; color:#000;
+  border:none; border-radius:50%; cursor:pointer; display:none;
+  font-weight:bold; z-index:1000;
+}
+
+/* Dark mode */
+body.dark { background:#111; color:#eee; }
+body.dark nav { background:#222; }
+body.dark footer { background:#222; }
+body.dark .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero.jpg') center/cover no-repeat; }
+
+/* Contact form */
+form { display:flex; flex-direction:column; max-width:500px; margin:0 auto; }
+form input, form textarea { margin:10px 0; padding:10px; border-radius:5px; border:1px solid #ccc; }
+form button { padding:10px; background:#ffbb00; color:#000; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
+form button:hover { background:#fff; color:#000; }
+
+/* Admin hidden section */
+#adminContent { display:none; }
+
+/* Responsive */
+@media(max-width:768px){
+  nav { flex-direction: column; }
+  nav a { margin:10px 0; }
+  .hero h1 { font-size:2rem; }
+}
+.ad-banner {
+  background: #ffbb00;
+  color: #111;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 40px auto;
+  border-radius: 15px;
+  max-width: 1000px;
+  transition: transform 0.3s;
+}
+
+.ad-banner:hover {
+  transform: scale(1.02);
+}
+
+.ad-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.ad-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.ad-banner .cta {
+  background: #111;
+  color: #ffbb00;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.ad-banner .cta:hover {
+  background: #333;
+  color: #fff;
+}
