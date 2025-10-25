@@ -111,3 +111,35 @@ form button:hover { background:#fff; color:#000; }
   background: #333;
   color: #fff;
 }
+/* Mobile fixes */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  header, nav, footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section img, .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  button, .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .content, .section {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .navbar ul {
+    display: block;
+    padding: 0;
+  }
+}
