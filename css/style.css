@@ -1,113 +1,207 @@
-/* Reset & base */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-body { background:#fff; color:#111; transition:0.3s; }
-a { text-decoration:none; color:inherit; }
-h1,h2,h3,h4,h5,h6 { margin-bottom:10px; }
+/* =====================
+   FEARGOD STUDIOS CSS
+   Responsive & Modern
+===================== */
 
-/* Navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+/* Variables for light/dark mode */
+:root {
+  --bg: #fff;
+  --text: #111;
+  --primary: #111;
+  --accent: #007bff;
+}
+
+body.dark-mode {
+  --bg: #111;
+  --text: #eee;
+  --primary: #eee;
+  --accent: #00bcd4;
+}
+
+/* NAVBAR */
 nav {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:15px 50px; background:#111; color:#fff;
-  position: sticky; top:0; z-index: 100;
-}
-nav a { margin:0 15px; color:#fff; font-weight:500; }
-nav a:hover { color:#ffbb00; }
-nav .logo { font-weight:bold; font-size:1.5rem; }
-
-/* Hero */
-.hero {
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-  height:80vh; 
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero.jpg') center/cover no-repeat;
-  color:#fff; text-align:center;
-}
-.hero h1 { font-size:3rem; margin-bottom:20px; }
-.hero p { font-size:1.2rem; margin-bottom:30px; }
-.hero .cta { padding:10px 25px; background:#ffbb00; color:#000; border-radius:25px; font-weight:bold; transition:0.3s; }
-.hero .cta:hover { background:#fff; color:#000; }
-
-/* Sections */
-section { padding:60px 20px; max-width:1200px; margin:0 auto; }
-
-/* Gallery */
-.gallery-grid {
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px;
-}
-.gallery-grid img { width:100%; border-radius:10px; transition:0.3s; }
-.gallery-grid img:hover { transform:scale(1.05); }
-
-/* Music */
-.audio-player { margin:20px 0; }
-
-/* Footer */
-footer { background:#111; color:#fff; padding:20px; text-align:center; }
-footer a { color:#ffbb00; margin:0 10px; }
-footer a:hover { color:#fff; }
-
-/* Back-to-top button */
-#backToTop {
-  position:fixed; bottom:30px; right:30px;
-  padding:10px 15px; background:#ffbb00; color:#000;
-  border:none; border-radius:50%; cursor:pointer; display:none;
-  font-weight:bold; z-index:1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Dark mode */
-body.dark { background:#111; color:#eee; }
-body.dark nav { background:#222; }
-body.dark footer { background:#222; }
-body.dark .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero.jpg') center/cover no-repeat; }
-
-/* Contact form */
-form { display:flex; flex-direction:column; max-width:500px; margin:0 auto; }
-form input, form textarea { margin:10px 0; padding:10px; border-radius:5px; border:1px solid #ccc; }
-form button { padding:10px; background:#ffbb00; color:#000; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
-form button:hover { background:#fff; color:#000; }
-
-/* Admin hidden section */
-#adminContent { display:none; }
-
-/* Responsive */
-@media(max-width:768px){
-  nav { flex-direction: column; }
-  nav a { margin:10px 0; }
-  .hero h1 { font-size:2rem; }
+nav h1 {
+  font-size: 1.5rem;
 }
-.ad-banner {
-  background: #ffbb00;
-  color: #111;
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--bg);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* SECTIONS */
+section {
+  padding: 2rem;
   text-align: center;
-  padding: 30px 20px;
-  margin: 40px auto;
-  border-radius: 15px;
-  max-width: 1000px;
-  transition: transform 0.3s;
 }
 
-.ad-banner:hover {
-  transform: scale(1.02);
-}
-
-.ad-banner h2 {
+section h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
-.ad-banner p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
-.ad-banner .cta {
-  background: #111;
-  color: #ffbb00;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: 0.3s;
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.ad-banner .cta:hover {
-  background: #333;
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* MUSIC PAGE */
+.music-player iframe,
+.music-player audio {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* CONTACT FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  background-color: var(--accent);
   color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary);
+  color: var(--bg);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* BACK TO TOP BUTTON */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+#backToTop.show {
+  display: block;
+}
+
+/* MEDIA QUERIES FOR SMALL SCREENS */
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  p, a, button {
+    font-size: 0.9rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
 }
