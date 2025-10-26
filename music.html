@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Music | FearGod Studios</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav>
-  <div class="logo">FearGod Studios</div>
-  <div>
+
+<header class="navbar container">
+  <div class="brand">
+    <img src="assets/images/logo.png" alt="FearGod Studios logo">
+    <div class="title">FearGod Studios</div>
+  </div>
+  <nav class="nav-links">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
     <a href="music.html">Music</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
-    <button id="mode-toggle">🌓</button>
+  </nav>
+  <div style="display:flex;align-items:center;gap:10px">
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
   </div>
-</nav>
+</header>
 
-<section>
-  <h1>Music Library</h1>
-  <div id="musicList">
-    <!-- JS will dynamically add audio players -->
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" role="dialog" aria-hidden="true">
+  <div class="close drawer-close" style="text-align:right"><button class="menu-btn drawer-close">✕</button></div>
+  <div style="padding:8px 0 0 8px"><img src="assets/images/logo.png" alt="logo" style="height:56px"></div>
+  <nav style="margin-top:18px">
+    <a href="index.html">Home</a><br>
+    <a href="music.html">Music</a><br>
+    <a href="gallery.html">Gallery</a><br>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<section class="section">
+  <div class="inner container">
+    <h2>Music Library</h2>
+    <p>Listen to our tracks. Click a track to play in the player below (autoplay may be blocked by some browsers).</p>
+
+    <div id="musicList" class="player-wrap"></div>
+    <audio id="mainPlayer" controls style="width:100%;margin-top:12px"></audio>
   </div>
 </section>
 
-<footer>
-  <p>Connect with me:</p>
-  <a href="https://github.com/blessings1234">GitHub</a>
-  <a href="https://instagram.com/blebozm123">Instagram</a>
-  <a href="mailto:dtinalesa@gmail.com">Email</a>
-  <a href="https://www.facebook.com/profile.php?id=61577209395423">facebook</a>
-  <a href="https://www.tiktok.com/@blebozm123?is_from_webapp=1&sender_device=pc">tiktok</a>
-  <p>© 2025 FearGod Studios. All rights reserved.</p>
-</footer>
+<footer><div class="container"><p>© 2025 FearGod Studios</p></div></footer>
 <button id="backToTop">↑</button>
 <script src="js/script.js"></script>
-
-<script>
-  // Example music
-  addMusic("tears in silience", "assets/music/SNOWFLAKE - TEARS IN SILENCE  2025-08-21 22_37.m4a");
-  addMusic("THIS IS ME", "assets/music/SNOWFLAKE - THIS IS ME .m4a");
-</script>
 </body>
 </html>
