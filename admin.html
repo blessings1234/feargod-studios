@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin | FearGod Studios</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin | FearGod Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="navbar container">
-  <div class="brand">
-    <img src="assets/images/logo.png" alt="logo">
-    <div class="title">FearGod Studios</div>
-  </div>
-  <nav class="nav-links"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav>
-  <div style="display:flex;align-items:center;gap:10px"><button class="menu-btn">☰</button><button id="theme-toggle" class="theme-btn">🌙</button></div>
-</header>
-
-<div class="mobile-drawer"><div class="close drawer-close"><button class="menu-btn drawer-close">✕</button></div>
-  <div style="padding:8px 0 0 8px"><img src="assets/images/logo.png" alt="logo" style="height:56px"></div>
-  <nav style="margin-top:18px"><a href="index.html">Home</a><br><a href="contact.html">Contact</a></nav>
-</div>
-
-<section class="section">
-  <div class="inner container">
-    <h2>Admin Panel</h2>
-
-    <div id="loginWrap">
-      <p class="msg">Note: This admin panel uses client-side storage for demo purposes only and is not secure. For production, implement server-side authentication. To enable local testing, open your browser console and set a test password with: <code>localStorage.setItem('fg_admin_pass','yourpass')</code></p>
-      <form id="loginForm">
-        <input id="adminPass" type="password" placeholder="Admin password" required>
-        <button type="submit" class="btn">Login</button>
-      </form>
+  <header class="navbar container">
+    <div class="brand">
+      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
+      <div class="brand-title">FearGod Studios</div>
     </div>
-
-    <div id="adminPanel" style="display:none;margin-top:16px">
-      <h3>Messages Received</h3>
-      <div id="adminMessages"></div>
-      <button onclick="localStorage.removeItem('fg_messages'); renderAdminMessages();" class="btn" style="margin-top:12px;background:#333;color:#fff">Clear messages</button>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn">🌙</button>
+      <button class="menu-btn">☰</button>
     </div>
-  </div>
-</section>
+  </header>
 
-<footer><div class="container"><p>© 2025 FearGod Studios</p></div></footer>
-<button id="backToTop">↑</button>
-<script src="js/script.js"></script>
+  <div class="mobile-drawer" aria-hidden="true">
+    <button class="drawer-close">✕</button>
+    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
+    <nav class="drawer-nav"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav>
+  </div>
+
+  <main>
+    <section class="section container">
+      <h1>Admin Panel</h1>
+
+      <div id="loginWrap">
+        <form id="loginForm">
+          <input id="adminPass" type="password" placeholder="Admin password" required />
+          <button type="submit" class="btn primary">Login</button>
+        </form>
+      </div>
+
+      <div id="adminPanel" style="display:none;margin-top:16px">
+        <h3>Messages Received</h3>
+        <div id="adminMessages"></div>
+        <button onclick="localStorage.removeItem('fg_messages'); location.reload();" class="btn" style="background:#333;color:#fff">Clear messages</button>
+      </div>
+
+    </section>
+  </main>
+
+  <div class="collab-banner">
+    <p>🔥 Collab with <strong>Snowflake</strong> — contact for features & production.</p>
+    <p>💻 Developed by <strong>Blessings Tinalesa</strong> | WhatsApp: <a href="https://wa.me/260963314180" target="_blank" rel="noopener">+260 963 314 180</a></p>
+  </div>
+
+  <footer class="site-footer"><div class="container"><div>© 2025 FearGod Studios</div></div></footer>
+  <button id="backToTop">↑</button>
+  <script src="js/script.js"></script>
 </body>
 </html>

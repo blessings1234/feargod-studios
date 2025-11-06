@@ -1,94 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FearGod Studios</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | FearGod Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar container">
+    <div class="brand">
+      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
+      <div class="brand-title">FearGod Studios</div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn">🌙</button>
+      <button class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" aria-hidden="true">
+    <button class="drawer-close">✕</button>
+    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
+    <nav class="drawer-nav"><a href="index.html">Home</a><a href="music.html">Music</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+  </div>
+
+  <main>
+    <section class="section container">
+      <h1>About FearGod Studios</h1>
+      <p class="muted">We blend code, sound and visuals into a single craft. Founded by Blessings Tinalesa — we produce music, build artist websites, and design visual stories that carry weight and honesty.</p>
+      <p>Our approach mixes timeless composition with modern execution: real instruments, clean programming, and an uncompromising attention to detail.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div>© 2025 FearGod Studios</div></div></footer>
+  <button id="backToTop">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FearGod Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- NAV -->
-<header class="navbar container">
-  <div class="brand">
-    <img src="assets/images/logo.png" alt="FearGod Studios logo">
-    <div class="title">FearGod Studios</div>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <img src="assets/images/feargod-logo.png" class="loader-img" alt="FearGod Logo">
+    <div class="loader-text">Welcome to FearGod Studios</div>
   </div>
 
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="music.html">Music</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- NAV -->
+  <header class="navbar container">
+    <div class="brand">
+      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
+      <div class="brand-title">FearGod Studios</div>
+    </div>
 
-  <div style="display:flex;align-items:center;gap:10px">
-    <button class="menu-btn" aria-label="Open menu">☰</button>
-    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="music.html">Music</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn">🌙</button>
+      <button class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <button class="drawer-close">✕</button>
+    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
-</header>
 
-<!-- Mobile Drawer -->
-<div class="mobile-drawer" role="dialog" aria-hidden="true">
-  <div class="close drawer-close" style="text-align:right"><button class="menu-btn drawer-close">✕</button></div>
-  <div style="padding:8px 0 0 8px"><img src="assets/images/logo.png" alt="logo" style="height:56px"></div>
-  <nav style="margin-top:18px">
-    <a href="index.html">Home</a><br>
-    <a href="music.html">Music</a><br>
-    <a href="gallery.html">Gallery</a><br>
-    <a href="contact.html">Contact</a>
-  </nav>
-</div>
+  <!-- HERO -->
+  <main>
+    <section class="hero container">
+      <h1 class="hero-title">FearGod Studios</h1>
+      <p id="quote" class="hero-quote">Where creativity meets purpose.</p>
+      <div class="hero-cta">
+        <a href="music.html" class="btn primary">Explore Music</a>
+        <a href="gallery.html" class="btn outline">View Gallery</a>
+      </div>
+    </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1>FearGod Studios</h1>
-    <p>Professional • Personal • Artistic • Street — where creativity meets code and music meets heart.</p>
-    <a href="music.html" class="cta">Explore Music</a>
+    <section class="section about container">
+      <h2>What we do</h2>
+      <p class="muted">Music production • Web & visual design • Creative direction. We make looks that sound right and sounds that feel right.</p>
+    </section>
+
+    <!-- Collab banner -->
+    <div class="collab-banner">
+      <p>🔥 Interested in collabs? Contact <strong>Snowflake</strong> for features & collabs.</p>
+      <p>💻 Developed by <strong>Blessings Tinalesa</strong> | WhatsApp: <a href="https://wa.me/260963314180" target="_blank">+260 963 314 180</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2025 FearGod Studios</div>
+    </div>
+  </footer>
+
+  <button id="backToTop">↑</button>
+
+  <!-- shared lightbox for gallery -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lbClose" class="lb-close">✕</button>
+    <button id="lbPrev" class="lb-nav left">‹</button>
+    <img id="lbImage" class="lb-image" src="" alt="expanded" />
+    <button id="lbNext" class="lb-nav right">›</button>
   </div>
-</section>
 
-<!-- AD BANNER -->
-<section class="ad-banner container">
-  <div>
-    <h3>🚀 Web Development & Creative Services</h3>
-    <p>We design and launch websites, music platforms, visual identity, and more — built with heart and edge.</p>
-  </div>
-  <div><a href="contact.html" class="cta">Hire Us Now</a></div>
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-  <div class="inner container">
-    <h2>About</h2>
-    <p>FearGod Studios blends music production, web design, and visual storytelling. We make work that sounds and looks like a statement.</p>
-  </div>
-</section>
-
-<!-- HOME PREVIEWS -->
-<section class="section">
-  <div class="inner container">
-    <h2>Featured Tracks</h2>
-    <div id="musicList" class="player-wrap"></div>
-    <audio id="mainPlayer" controls style="width:100%;margin-top:10px"></audio>
-  </div>
-</section>
-
-<section class="section">
-  <div class="inner container">
-    <h2>Gallery Preview</h2>
-    <div id="galleryGrid" class="grid"></div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>© 2025 FearGod Studios — All rights reserved</p>
-  </div>
-</footer>
-
-<button id="backToTop">↑</button>
-<script src="js/script.js"></script>
+  <script>
+    // homepage quotes
+    window._FG_QUOTES = [
+      "Creating with purpose. Living with faith.",
+      "Less noise. More meaning.",
+      "Your vibe attracts your tribe.",
+      "Chase purpose, not clout.",
+      "Stay humble. Build loud.",
+      "It’s not just art, it’s testimony.",
+      "Dreams don’t work unless you do."
+    ];
+  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>

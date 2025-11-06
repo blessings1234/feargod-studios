@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Gallery | FearGod Studios</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="assets/images/feargod-logo.png" alt="FearGod Studios Logo">
-        <span>FearGod Studios</span>
-      </div>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="music.html">Music</a>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="nav-icons">
-        <button id="theme-toggle" class="theme-btn">🌞</button>
-        <div id="menu-toggle" class="hamburger">☰</div>
-      </div>
+  <header class="navbar container">
+    <div class="brand">
+      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
+      <div class="brand-title">FearGod Studios</div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
     </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn">🌙</button>
+      <button class="menu-btn">☰</button>
+    </div>
   </header>
 
-  <section class="gallery-section">
-    <h1>Gallery</h1>
-    <p class="subtitle">Where creativity meets visuals. Each photo tells a story.</p>
+  <div class="mobile-drawer" aria-hidden="true">
+    <button class="drawer-close">✕</button>
+    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
+    <nav class="drawer-nav"><a href="index.html">Home</a><a href="music.html">Music</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+  </div>
 
-    <div id="galleryGrid" class="gallery-grid">
-      <!-- JS dynamically adds images -->
-    </div>
-  </section>
+  <main>
+    <section class="section container">
+      <h1>Gallery</h1>
+      <div id="galleryGrid" class="grid"></div>
+    </section>
+  </main>
 
-  <footer>
-    <p>Connect with FearGod Studios:</p>
-    <a href="https://github.com/blessings1234">GitHub</a>
-    <a href="https://instagram.com/blebozm123">Instagram</a>
-    <a href="mailto:dtinalesa@gmail.com">Email</a>
-    <a href="https://www.facebook.com/profile.php?id=61577209395423">Facebook</a>
-    <a href="https://www.tiktok.com/@blebozm123?is_from_webapp=1&sender_device=pc">TikTok</a>
-    <p>© 2025 FearGod Studios. All rights reserved.</p>
-  </footer>
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lbClose" class="lb-close">✕</button>
+    <button id="lbPrev" class="lb-nav left">‹</button>
+    <img id="lbImage" class="lb-image" src="" alt="expanded" />
+    <button id="lbNext" class="lb-nav right">›</button>
+  </div>
 
+  <footer class="site-footer"><div class="container"><div>© 2025 FearGod Studios</div></div></footer>
   <button id="backToTop">↑</button>
-  <script src="js/script.js"></script>
 
   <script>
-    addGallery("assets/images/SNOWFLAKE.jpg");
-    addGallery("assets/images/WhatsApp Image 2025-09-26 at 16.08.04_f14f2f88.jpg");
-    addGallery("assets/images/WhatsApp Image 2025-09-26 at 16.08.10_b136719f.jpg");
-    addGallery("assets/images/WhatsApp Image 2025-09-26 at 16.08.11_499f0e16.jpg");
-    addGallery("assets/images/WhatsApp Image 2025-09-26 at 16.08.17_b66f00f1.jpg");
+    window._FG_GALLERY = [
+      "assets/images/SNOWFLAKE.jpg",
+      "assets/images/WhatsApp Image 2025-09-26 at 16.08.04_f14f2f88.jpg",
+      "assets/images/WhatsApp Image 2025-09-26 at 16.08.10_b136719f.jpg",
+      "assets/images/WhatsApp Image 2025-09-26 at 16.08.11_499f0e16.jpg",
+      "assets/images/WhatsApp Image 2025-09-26 at 16.08.17_b66f00f1.jpg"
+    ];
   </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
