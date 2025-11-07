@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | FearGod Studios</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/images/feargod-logo.png" />
 </head>
-<body>
-  <header class="navbar container">
-    <div class="brand">
-      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
-      <div class="brand-title">FearGod Studios</div>
+
+<body class="dark-mode">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/images/feargod-logo.png" alt="FearGod Studios Logo" />
+      <span>FearGod Studios</span>
     </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-      <button class="menu-btn">☰</button>
-    </div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="mode-toggle">🌓</button></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="page-header fade-in">
+    <h1>FearGod Gallery</h1>
+    <p>Every picture tells a story — and this is ours.</p>
   </header>
 
-  <div class="mobile-drawer" aria-hidden="true">
-    <button class="drawer-close">✕</button>
-    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
-    <nav class="drawer-nav"><a href="index.html">Home</a><a href="music.html">Music</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
+  <!-- Gallery Grid -->
+  <section class="gallery-section fade-in-slow">
+    <div class="gallery-grid" id="galleryGrid">
+      <img src="assets/images/SNOWFLAKE.jpg" alt="Snowflake Art" />
+      <img src="assets/images/WhatsApp Image 2025-09-26 at 16.08.04_f14f2f88.jpg" alt="Studio Shot" />
+      <img src="assets/images/WhatsApp Image 2025-09-26 at 16.08.10_b136719f.jpg" alt="FearGod Project" />
+      <img src="assets/images/WhatsApp Image 2025-09-26 at 16.08.11_499f0e16.jpg" alt="Behind the Scenes" />
+      <img src="assets/images/WhatsApp Image 2025-09-26 at 16.08.17_b66f00f1.jpg" alt="Creative Moment" />
+    </div>
+  </section>
+
+  <!-- Lightbox Popup -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" />
+    <div class="lightbox-controls">
+      <span id="prev">&#10094;</span>
+      <span id="next">&#10095;</span>
+    </div>
   </div>
 
-  <main>
-    <section class="section container">
-      <h1>Gallery</h1>
-      <div id="galleryGrid" class="grid"></div>
-    </section>
-  </main>
+  <!-- Footer -->
+  <footer class="footer fade-in">
+    <div class="footer-socials">
+      <p>Connect with us:</p>
+      <a href="https://github.com/blessings1234">GitHub</a>
+      <a href="https://instagram.com/blebozm123">Instagram</a>
+      <a href="mailto:dtinalesa@gmail.com">Email</a>
+      <a href="https://www.facebook.com/profile.php?id=61577209395423">Facebook</a>
+      <a href="https://www.tiktok.com/@blebozm123">TikTok</a>
+    </div>
+    <div class="footer-banner">
+      <p>🎵 Collab with Snowflake? Contact <strong>+260963314180</strong></p>
+      <p>Developed by <strong>Blessings Tinalesa</strong> © 2025 FearGod Studios</p>
+    </div>
+  </footer>
 
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lbClose" class="lb-close">✕</button>
-    <button id="lbPrev" class="lb-nav left">‹</button>
-    <img id="lbImage" class="lb-image" src="" alt="expanded" />
-    <button id="lbNext" class="lb-nav right">›</button>
-  </div>
-
-  <footer class="site-footer"><div class="container"><div>© 2025 FearGod Studios</div></div></footer>
   <button id="backToTop">↑</button>
-
-  <script>
-    window._FG_GALLERY = [
-      "assets/images/SNOWFLAKE.jpg",
-      "assets/images/WhatsApp Image 2025-09-26 at 16.08.04_f14f2f88.jpg",
-      "assets/images/WhatsApp Image 2025-09-26 at 16.08.10_b136719f.jpg",
-      "assets/images/WhatsApp Image 2025-09-26 at 16.08.11_499f0e16.jpg",
-      "assets/images/WhatsApp Image 2025-09-26 at 16.08.17_b66f00f1.jpg"
-    ];
-  </script>
   <script src="js/script.js"></script>
 </body>
 </html>

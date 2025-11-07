@@ -5,62 +5,76 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Music | FearGod Studios</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="navbar container">
-    <div class="brand">
-      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
-      <div class="brand-title">FearGod Studios</div>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="music.html" class="active">Music</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-      <button class="menu-btn">☰</button>
+<body class="dark-mode">
+  <header class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <img src="assets/images/feargod-logo.png" class="nav-logo" alt="logo">
+        <div class="brand-title">FearGod Studios</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="music.html" class="active">Music</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="modeToggle" title="Toggle theme">🌙</button>
+        <button class="menu-btn">☰</button>
+      </div>
     </div>
   </header>
 
-  <div class="mobile-drawer" aria-hidden="true">
-    <button class="drawer-close">✕</button>
-    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
-    <nav class="drawer-nav"><a href="index.html">Home</a><a href="music.html">Music</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
-  </div>
-
   <main>
     <section class="section container">
-      <h1>Music</h1>
-      <p class="muted">Play, preview and queue tracks.</p>
-
+      <div class="h2">Music</div>
       <div class="player-wrap">
         <div class="player-left">
-          <img src="assets/images/feargod-logo.png" class="now-art" alt="now playing">
+          <img src="assets/images/feargod-logo.png" class="player-art" alt="Now playing">
         </div>
+
         <div class="player-right">
-          <div id="musicList" class="music-list"></div>
-          <audio id="mainPlayer" controls preload="metadata" style="width:100%; margin-top:12px"></audio>
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div>
+              <strong id="nowPlaying">Pick a track to play</strong>
+              <div class="muted">Visual player · Click a track to play</div>
+            </div>
+            <div style="min-width:220px;">
+              <audio id="audioPlayer" controls preload="metadata" style="width:100%"></audio>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <div id="musicList" class="music-list">
+              <!-- tracks -->
+              <div class="track" data-src="assets/music/SNOWFLAKE - TEARS IN SILENCE.m4a" data-title="Tears In Silence">
+                <div><strong>Tears In Silence</strong><div class="muted" style="font-size:0.85rem">SNOWFLAKE</div></div>
+                <div>▶</div>
+              </div>
+
+              <div class="track" data-src="assets/music/SNOWFLAKE - THIS IS ME.m4a" data-title="This Is Me">
+                <div><strong>This Is Me</strong><div class="muted" style="font-size:0.85rem">SNOWFLAKE</div></div>
+                <div>▶</div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <div class="collab-banner">
-    <p>🔥 Collab with <strong>Snowflake</strong> — contact for features & production.</p>
-    <p>💻 Developed by <strong>Blessings Tinalesa</strong> | WhatsApp: <a href="https://wa.me/260963314180" target="_blank" rel="noopener">+260 963 314 180</a></p>
+    <p>🔥 Collab with <strong>Snowflake</strong> — WhatsApp: <a href="https://wa.me/260963314180" target="_blank">+260 963 314 180</a></p>
+    <p class="muted">Developed by <strong>Blessings Tinalesa</strong> © 2025</p>
   </div>
 
-  <footer class="site-footer"><div class="container"><div>© 2025 FearGod Studios</div></div></footer>
+  <footer class="site-footer"><div class="container"><p class="muted">© 2025 FearGod Studios</p></div></footer>
   <button id="backToTop">↑</button>
-
-  <script>
-    window._FG_PLAYLIST = [
-      { title: "Tears in Silence", src: "assets/music/SNOWFLAKE - TEARS IN SILENCE  2025-08-21 22_37.m4a" },
-      { title: "This Is Me", src: "assets/music/SNOWFLAKE - THIS IS ME .m4a" }
-    ];
-  </script>
-  <script src="js/script.js"></script>
 </body>
 </html>

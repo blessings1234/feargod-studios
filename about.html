@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | FearGod Studios</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | FearGod Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-<nav>
-  <div class="logo">FearGod Studios</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="music.html">Music</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <button id="mode-toggle">🌓</button>
+<body class="dark-mode">
+  <header class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <img src="assets/images/feargod-logo.png" class="nav-logo" alt="logo">
+        <div class="brand-title">FearGod Studios</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="music.html">Music</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="modeToggle" title="Toggle theme">🌙</button>
+        <button class="menu-btn">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <div class="h2">About FearGod Studios</div>
+      <div style="margin-top:14px;" class="card">
+        <p class="muted">Founded by Blessings Tinalesa, FearGod Studios is a creative house where faith, music, and design meet. We produce music, build artist websites, and craft visual stories that feel authentic, raw, and cinematic.</p>
+        <p class="muted" style="margin-top:10px;">Our work prioritizes emotion and clarity — we value timeless composition and modern execution.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="collab-banner">
+    <p>🔥 Collab with <strong>Snowflake</strong> — features & production. WhatsApp: <a href="https://wa.me/260963314180" target="_blank" rel="noopener">+260 963 314 180</a></p>
+    <p class="muted" style="margin-top:6px;">Developed by <strong>Blessings Tinalesa</strong> © 2025</p>
   </div>
-</nav>
 
-<section>
-  <h1>About FearGod Studios</h1>
-  <p>FearGod Studios is a space where music, art, and technology collide. Founded by Blessings Tinalesa, we create music, projects, and content with heart and street-smart creativity.</p>
-  <img src="assets/images/hero.jpg" alt="Studio image" style="width:100%;max-width:800px;margin-top:20px;border-radius:10px;">
-</section>
-
-<footer>
-  <p>Connect with me:</p>
-  <a href="https://github.com/blessings1234">GitHub</a>
-  <a href="https://instagram.com/blebozm123">Instagram</a>
-  <a href="mailto:dtinalesa@gmail.com">Email</a>
-  <a href="https://www.facebook.com/profile.php?id=61577209395423">facebook</a>
-  <a href="https://www.tiktok.com/@blebozm123?is_from_webapp=1&sender_device=pc">tiktok</a>
-  <p>© 2025 FearGod Studios. All rights reserved.</p>
-<button id="backToTop">↑</button>
-<script src="js/script.js"></script>
+  <footer class="site-footer"><div class="container"><p class="muted">© 2025 FearGod Studios</p></div></footer>
+  <button id="backToTop">↑</button>
 </body>
 </html>

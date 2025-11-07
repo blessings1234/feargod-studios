@@ -5,47 +5,51 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | FearGod Studios</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="navbar container">
-    <div class="brand">
-      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
-      <div class="brand-title">FearGod Studios</div>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-      <button class="menu-btn">☰</button>
+<body class="dark-mode">
+  <header class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <img src="assets/images/feargod-logo.png" class="nav-logo" alt="logo">
+        <div class="brand-title">FearGod Studios</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="music.html">Music</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="modeToggle" title="Toggle theme">🌙</button>
+        <button class="menu-btn">☰</button>
+      </div>
     </div>
   </header>
 
-  <div class="mobile-drawer" aria-hidden="true">
-    <button class="drawer-close">✕</button>
-    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
-    <nav class="drawer-nav"><a href="index.html">Home</a><a href="music.html">Music</a><a href="gallery.html">Gallery</a><a href="about.html">About</a></nav>
-  </div>
-
   <main>
     <section class="section container">
-      <h1>Contact</h1>
-      <p class="muted">Send a message — we reply fast.</p>
+      <div class="h2">Contact</div>
+      <p class="muted">Shoot a message — we respond as soon as possible.</p>
 
-      <form id="contactForm" action="https://formspree.io/f/myznrwqr" method="POST" class="contact-form">
-        <input name="name" type="text" placeholder="Your name" required />
-        <input name="email" type="email" placeholder="Your email" required />
+      <form class="contact-form" action="https://formspree.io/f/myznrwqr" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
         <textarea name="message" placeholder="Your message" required></textarea>
         <button type="submit" class="btn primary">Send Message</button>
       </form>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container"><div>© 2025 FearGod Studios</div></div></footer>
+  <div class="collab-banner">
+    <p>🔥 Collab with <strong>Snowflake</strong> — WhatsApp: <a href="https://wa.me/260963314180" target="_blank">+260 963 314 180</a></p>
+    <p class="muted">Developed by <strong>Blessings Tinalesa</strong> © 2025</p>
+  </div>
+
+  <footer class="site-footer"><div class="container"><p class="muted">© 2025 FearGod Studios</p></div></footer>
   <button id="backToTop">↑</button>
-  <script src="js/script.js"></script>
 </body>
 </html>

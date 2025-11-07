@@ -3,148 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About | FearGod Studios</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="navbar container">
-    <div class="brand">
-      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
-      <div class="brand-title">FearGod Studios</div>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-      <button class="menu-btn">☰</button>
-    </div>
-  </header>
-
-  <div class="mobile-drawer" aria-hidden="true">
-    <button class="drawer-close">✕</button>
-    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
-    <nav class="drawer-nav"><a href="index.html">Home</a><a href="music.html">Music</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
-  </div>
-
-  <main>
-    <section class="section container">
-      <h1>About FearGod Studios</h1>
-      <p class="muted">We blend code, sound and visuals into a single craft. Founded by Blessings Tinalesa — we produce music, build artist websites, and design visual stories that carry weight and honesty.</p>
-      <p>Our approach mixes timeless composition with modern execution: real instruments, clean programming, and an uncompromising attention to detail.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="container"><div>© 2025 FearGod Studios</div></div></footer>
-  <button id="backToTop">↑</button>
-  <script src="js/script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>FearGod Studios</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+  <link rel="icon" href="assets/images/feargod-logo.png" />
+  <meta name="description" content="FearGod Studios — cinematic production, design & creative direction.">
 </head>
-<body>
+<body class="dark-mode">
 
   <!-- PRELOADER -->
-  <div id="preloader">
-    <img src="assets/images/feargod-logo.png" class="loader-img" alt="FearGod Logo">
-    <div class="loader-text">Welcome to FearGod Studios</div>
+  <div id="loading-screen">
+    <img src="assets/images/feargod-logo.png" alt="FearGod logo">
+    <p>Welcome to FearGod Studios</p>
   </div>
 
-  <!-- NAV -->
-  <header class="navbar container">
-    <div class="brand">
-      <img src="assets/images/feargod-logo.png" alt="logo" class="nav-logo" />
-      <div class="brand-title">FearGod Studios</div>
-    </div>
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <div class="navbar container">
+      <div class="brand">
+        <img src="assets/images/feargod-logo.png" class="nav-logo" alt="FearGod Logo">
+        <div class="brand-title">FearGod Studios</div>
+      </div>
 
-    <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="music.html">Music</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="music.html">Music</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-    <div class="nav-actions">
-      <button id="theme-toggle" class="theme-btn">🌙</button>
-      <button class="menu-btn">☰</button>
+      <div class="nav-actions">
+        <button id="modeToggle" title="Toggle theme">🌙</button>
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </div>
     </div>
   </header>
-
-  <!-- MOBILE DRAWER -->
-  <div class="mobile-drawer" aria-hidden="true">
-    <button class="drawer-close">✕</button>
-    <div style="padding-top:10px"><img src="assets/images/feargod-logo.png" style="height:56px" alt="logo"></div>
-    <nav class="drawer-nav">
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
 
   <!-- HERO -->
   <main>
-    <section class="hero container">
-      <h1 class="hero-title">FearGod Studios</h1>
-      <p id="quote" class="hero-quote">Where creativity meets purpose.</p>
-      <div class="hero-cta">
-        <a href="music.html" class="btn primary">Explore Music</a>
-        <a href="gallery.html" class="btn outline">View Gallery</a>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">FearGod Studios</h1>
+        <p class="hero-sub">Cinematic sound • Creative direction • Web & visual design. We turn vision into sonic and visual testimony.</p>
+        <div class="hero-ctas">
+          <a href="music.html" class="btn primary">Explore Music</a>
+          <a href="gallery.html" class="btn ghost">View Gallery</a>
+        </div>
       </div>
     </section>
 
-    <section class="section about container">
-      <h2>What we do</h2>
-      <p class="muted">Music production • Web & visual design • Creative direction. We make looks that sound right and sounds that feel right.</p>
+    <section class="section container">
+      <div class="h2">What we do</div>
+      <div class="grid-3" style="margin-top:18px;">
+        <div class="card center">
+          <h3>Music Production</h3>
+          <p class="muted">Full production from concept to mastering — beats, mixing, and authentic storytelling.</p>
+        </div>
+        <div class="card center">
+          <h3>Visual & Web</h3>
+          <p class="muted">Artist websites, visuals, and branding — cinematic and street-smart design.</p>
+        </div>
+        <div class="card center">
+          <h3>Creative Direction</h3>
+          <p class="muted">We craft narratives that resonate — from singles to full albums and visual campaigns.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Collab banner -->
     <div class="collab-banner">
-      <p>🔥 Interested in collabs? Contact <strong>Snowflake</strong> for features & collabs.</p>
-      <p>💻 Developed by <strong>Blessings Tinalesa</strong> | WhatsApp: <a href="https://wa.me/260963314180" target="_blank">+260 963 314 180</a></p>
+      <p>🔥 Collab with <strong>Snowflake</strong> — features & production. Contact via WhatsApp: <a href="https://wa.me/260963314180" target="_blank" rel="noopener">+260 963 314 180</a></p>
+      <p class="muted" style="margin-top:6px;">Developed by <strong>Blessings Tinalesa</strong> © 2025 FearGod Studios</p>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div>© 2025 FearGod Studios</div>
+      <p class="muted">Follow: <a href="https://github.com/blessings1234" target="_blank" rel="noopener">GitHub</a> · <a href="https://instagram.com/blebozm123" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:dtinalesa@gmail.com">Email</a></p>
     </div>
   </footer>
 
-  <button id="backToTop">↑</button>
-
-  <!-- shared lightbox for gallery -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lbClose" class="lb-close">✕</button>
-    <button id="lbPrev" class="lb-nav left">‹</button>
-    <img id="lbImage" class="lb-image" src="" alt="expanded" />
-    <button id="lbNext" class="lb-nav right">›</button>
-  </div>
-
-  <script>
-    // homepage quotes
-    window._FG_QUOTES = [
-      "Creating with purpose. Living with faith.",
-      "Less noise. More meaning.",
-      "Your vibe attracts your tribe.",
-      "Chase purpose, not clout.",
-      "Stay humble. Build loud.",
-      "It’s not just art, it’s testimony.",
-      "Dreams don’t work unless you do."
-    ];
-  </script>
-  <script src="js/script.js"></script>
+  <button id="backToTop" title="Back to top">↑</button>
 </body>
 </html>
