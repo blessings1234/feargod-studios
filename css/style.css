@@ -166,3 +166,8 @@ body{
   .player-wrap{ flex-direction:column; align-items:center; }
   .player-art{ width:140px; height:140px; }
 }
+.logo-img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 0 4px gold);
+}
