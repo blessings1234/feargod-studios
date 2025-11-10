@@ -172,39 +172,18 @@
 
   }); // DOMContentLoaded
 })();
-// Mobile Menu Toggle
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-/* Mobile Menu Styling */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: gold;
-}
+// Mobile Menu Toggle - support multiple markup variants across pages
+(function(){
+  const menuToggle = document.getElementById('menuToggle') || document.getElementById('menu-toggle') || document.querySelector('.menu-btn') || document.querySelector('.hamburger');
+  const navLinksEl = document.getElementById('navLinks') || document.querySelector('.nav-links');
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  if(menuToggle && navLinksEl){
+    menuToggle.addEventListener('click', () => {
+      navLinksEl.classList.toggle('active');
+      // If the site uses a slide-in mobile drawer, toggle it too for consistency
+      const mobileDrawer = document.querySelector('.mobile-drawer');
+      if(mobileDrawer) mobileDrawer.classList.toggle('open');
+    });
   }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #111;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    padding: 20px;
-    border-left: 2px solid gold;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
+})();

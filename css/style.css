@@ -171,3 +171,15 @@ body{
   width: auto;
   filter: drop-shadow(0 0 4px gold);
 }
+
+/* ---- Mobile menu styles (moved from JS) ---- */
+.menu-toggle, #menu-toggle, .hamburger { display: none; font-size: 30px; cursor: pointer; color: var(--gold); }
+
+@media (max-width: 768px) {
+  .menu-toggle, #menu-toggle, .hamburger { display: block; }
+
+  /* Support both .nav-links (original) and #navLinks (gallery) */
+  .nav-links, #navLinks { display: none; flex-direction: column; background-color: var(--panel); position: absolute; top: 70px; right: 0; width: 220px; padding: 18px; border-left: 2px solid rgba(207,168,58,0.08); }
+
+  .nav-links.active, #navLinks.active { display: flex; }
+}
